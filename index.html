@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dogs By Breed</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dogs By Breed</h1>
+        <form>
+            <label for="breed">What breed do you want to see?</label>
+            <input type="text" name="breed" id="breed" required placeholder="hound">
+            <input type="submit" value="Get a dog!" required>
+        </form>
+        <section class="results hidden">
+            <h2>Look at that!</h2>
+            <div class="imgContainer">
+                <ul id="chosen"></ul>
+            </div>
+        </section>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="scripts.js"></script>    
+</body>
+</html>
