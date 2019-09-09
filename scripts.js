@@ -3,14 +3,34 @@ let userInput = '';
 
 function dogApiCall(userInput){
     fetch(`https://dog.ceo/api/breed/${userInput}/images/random`)
-    .then(response => response.json())
-    .then(responseJson => display(responseJson))
-    .catch(error => errMessage(responseJson));
+    .then(response => response.json())    
+    .then(responseJson => {
+        if(responseJson.status === "error"){
+            errMessage(responseJson);
+        }
+        else{
+            display(responseJson)
+        }
+    })
+        
+    .catch(error => alert('Something went wrong'));
 }
 
 function errMessage(responseJson){
     alert(responseJson.message);
 }
+
+// fetch(url, options)
+//     .then(response => {
+//       if (response.ok) {
+//         return response.json();
+//       }
+//       throw new Error(response.statusText);
+//     })
+//     .then(responseJson => displayResults(responseJson, maxResults))
+//     .catch(err => {
+//       $('#js-error-message').text(`Something went wrong: ${err.message}`);
+//     });
 
 
 
