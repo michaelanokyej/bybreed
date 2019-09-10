@@ -36,6 +36,7 @@ function errMessage(responseJson){
 
 function display(responseJson){
     console.log(responseJson);
+        $('#chosen').empty();
         $('#chosen').append(`   
         <li><div class="imgWrapper"><img src="${responseJson.message}" class="results-img"></div></li>
         `)
